@@ -83,7 +83,7 @@ def get_user_input() -> float:
      """
     while 1:
         val = input("Podaj wartość: ")
-        if re.match('[+-]?([0-9]*[.])?[0-9]+', val):
+        if re.match('^[+-]?([0-9]*[.])?[0-9]+$', val):
             return float(val)
         else:
             print(f"Wartość '{val}', musi byc typu float")
